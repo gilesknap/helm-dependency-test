@@ -1,0 +1,2 @@
+requests:  {{ .Values.namespace }}
+test: {{ .Values.test }} {{ .Values.serviceAccount.name  }}

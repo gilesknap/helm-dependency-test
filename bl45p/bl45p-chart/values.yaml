@@ -1,0 +1,29 @@
+# default values for all IOCs on bl45p
+exports:
+  beamline_defaults:
+    test: hello
+
+    # beamline: bl45pyyuuu
+    namespace: bl45pxxyyyyy
+    # serviceAccount:
+    #   name: bl45p-priv
+
+    # root folder for ioc source/binaries - not expected to change
+    iocFolder: /repos/epics/ioc
+
+    # provide a PVC for autosave
+    autosave: true
+
+    hostNetwork: true
+
+    # useAffinity - only run on nodes with label beamline:bl45p
+    useAffinity: true
+
+    # some beamline default resource limits
+    resources:
+      limits:
+        cpu: 10
+        memory: 1Gi
+      requests:
+        cpu: 200m
+        memory: 100Mi
